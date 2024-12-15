@@ -2,19 +2,30 @@
     background-color: whitesmoke;
 }
 .nav-bar{
-    width: 110%;
+    width: 101%;
     height: 50px;
     border: 1.5px solid #e9ddddbe;
     margin: -1% 2% 0% -1%;
     background-color: white;
 }
-
+ul{
+    list-style: none;
+    display: flex;  
+}
+.search-box{
+    margin: 0px 0px 0px 25%;
+    border-color: rgba(198, 214, 212, 0.829);
+    background-color: #EFEFEF;
+    height: 18px;
+}
+#menu-icon{
+    margin: 0px 0px 0px 10pc; 
+}
 .insta-logo {
-    width: 100px;
-    height: 30px;
-    object-fit: cover;
-    margin-left: 20%;
-    margin: 1% 2% 1% 20%;
+    margin: 0px 0px 0px 10pc;
+}
+.nav-icons{
+    margin: 0px 0px 0px 1pc;
 }
 .m-logo{
     width: 10%;
@@ -28,7 +39,7 @@
     object-fit: cover;
     border-radius: 50%;
 }
-.head{
+.profile{
     width: 50%;
     height: 100%;
     border: 0px solid;
@@ -37,6 +48,8 @@
 }
 #mediamodifier{
     font-size: x-large;
+    color: #161722;
+    
 }
 #message{
     width: 17%;
