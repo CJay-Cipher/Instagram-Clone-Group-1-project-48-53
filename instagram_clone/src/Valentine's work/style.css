@@ -39,6 +39,7 @@ ul{
     object-fit: cover;
     border-radius: 50%;
 }
+
 .profile{
     width: 50%;
     height: 100%;
@@ -49,7 +50,6 @@ ul{
 #mediamodifier{
     font-size: x-large;
     color: #161722;
-    
 }
 #message{
     width: 17%;
