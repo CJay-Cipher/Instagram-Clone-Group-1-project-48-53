@@ -55,3 +55,17 @@ ul{
     width: 17%;
     margin-left: 40px;
 }
+.faint-text{
+    opacity: 0.5;
+}
+.faint-text2{
+    opacity: 0.5;
+}
+.bigicon-link{
+    display: flex;
+    margin:5% 0% 0% 20%;
+}
+.big-icon{
+    margin: 0px 0px 0px 2pc;
+    
+}
