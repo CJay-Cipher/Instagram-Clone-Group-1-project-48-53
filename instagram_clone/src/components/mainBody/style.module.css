@@ -1,0 +1,39 @@
+.main_body {
+    margin: 50px 15%;
+}
+.main_body nav {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    border-top: 1px solid #808080;
+}
+.main_body nav .nav_content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.main_body nav .active {
+    border-top: 2px solid #fff;
+}
+.main_body nav .nav_content .nav_content_icon {
+    font-size: 20px;
+}
+.main_body nav .nav_content h4 {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.main_body .post_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-items: auto;
+    gap: 35px;
+}
+.main_body .post_grid li {
+    list-style: none;
+}
+.main_body .post_grid li img {
+    height: 100%;
+    width: 100%;
+}
