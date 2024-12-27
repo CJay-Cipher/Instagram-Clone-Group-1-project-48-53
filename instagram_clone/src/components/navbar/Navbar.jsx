@@ -1,4 +1,5 @@
 import React from "react";
+import "./navbar.css";
 import mainLogo from "../../assets/nav_icons/instagram_logo.png";
 import SearchBar from "./SearchBar";
 import NavIcon from "./NavIcon";

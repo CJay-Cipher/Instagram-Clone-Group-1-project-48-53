@@ -1,0 +1,94 @@
+:root {
+    --nav-color: #fff;
+    --nav-bg-color: #000;
+    --nav-icon-hover-color: #303030;
+    --search-text-color: #fff;
+    --search-icon-color: #777;
+    --search-placholder-color: #777;
+    --search-bg-color: #303030;
+}
+
+header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-bg-color);
+    border-bottom: 1px solid #2c2c2c;
+    /* border: 1px solid red; */
+}
+header .navbar {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+}
+header .navbar .logo-box {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+header .navbar .logo-box img {
+    height: 40px;
+    cursor: pointer;
+}
+header .navbar .nav-search-bar {
+    height: 46px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: var(--search-bg-color);
+    border-radius: 5px;
+    /* border: 1px solid red; */
+}
+header .navbar .nav-search-bar .nav-search-icon {
+    color: var(--search-icon-color);
+}
+
+header .navbar .nav-search-bar input {
+    width: 100%;
+    border: none;
+    color: var(--search-text-color);
+    background-color: transparent;
+    /* font-family: "Roboto"; */
+    font-size: 16px;
+    height: 100%;
+    padding: 0 15px;
+    outline: none;
+    /* letter-spacing: 1.05px; */
+}
+header .navbar .nav-search-bar input::placeholder {
+    color: var(--search-placholder-color);
+}
+
+header .navbar .nav-links {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+header .navbar .nav-links .icon-nav {
+    box-sizing: content-box;
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+
+header .navbar .nav-links .icon-nav:hover {
+    /* color: #ffcea0; */
+    background-color: var(--nav-icon-hover-color);
+}
+header .navbar .nav-links > #user-image {
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}

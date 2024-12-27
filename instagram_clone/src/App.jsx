@@ -1,12 +1,13 @@
-// import "./App.css";
-import Navbar from "./Navbar/Navbar";
-import Header from "./Header/Header.jsx";
+import Navbar from "./components/navbar/Navbar";
+import TopBody from "./components/topBody/TopBody";
+import Circle from "./components/topBody/Circle";
 
 function App() {
     return (
         <>
             <Navbar />
-            <Header />
+            <TopBody />
+            <Circle />
         </>
     );
 }
