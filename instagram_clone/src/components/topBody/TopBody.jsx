@@ -7,8 +7,8 @@ import Intro from "./Intro.jsx";
 
 function Header() {
     return (
-        <section className="black">
-            <img src={Mlogo} alt="user profile image" />
+        <section className="top-body">
+            <img src={Mlogo} className="body-profile-pic" alt="user profile image" />
             <div className="information">
                 <Information />
                 <Numbers />

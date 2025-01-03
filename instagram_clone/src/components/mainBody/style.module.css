@@ -6,7 +6,8 @@
     display: flex;
     justify-content: center;
     gap: 90px;
-    border-top: 1px solid #808080;
+    color: #808080;
+    border-top: 1px solid #92929252;
 }
 .main_body nav .nav_content {
     display: flex;
@@ -14,21 +15,23 @@
     gap: 12px;
 }
 .main_body nav .active {
-    border-top: 2px solid #fff;
+    color: var(--main-body-color);
+    border-top: 2px solid var(--main-body-color);
 }
 .main_body nav .nav_content .nav_content_icon {
     font-size: 20px;
 }
 .main_body nav .nav_content h4 {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 2px;
 }
 .main_body .post_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    grid-template-columns: repeat(3, auto);
     justify-items: auto;
-    gap: 35px;
+    gap: 10px;
 }
 .main_body .post_grid li {
     list-style: none;
@@ -36,4 +39,50 @@
 .main_body .post_grid li img {
     height: 100%;
     width: 100%;
+}
+
+/* =================================================================== */
+@media (max-width: 1100px) {
+    .main_body {
+        margin: 50px 5%;
+    }
+    .main_body nav .nav_content .nav_content_icon {
+        font-size: 18px;
+    }
+    .main_body nav .nav_content h4 {
+        font-size: 14px;
+    }
+}
+/* =================================================================== */
+@media (max-width: 900px) {
+    .main_body .post_grid {
+        gap: 5px;
+    }
+}
+/* =================================================================== */
+@media (max-width: 800px) {
+    .main_body {
+        margin: 10px 0;
+    }
+    .main_body nav {
+        height: 60px;
+        width: 100%;
+        gap: 0;
+    }
+    .main_body nav .nav_content {
+        flex: 1;
+        justify-content: center;
+    }
+    .main_body nav .active {
+        border-top: 1px solid var(--main-body-color);
+    }
+    .main_body nav .nav_content .nav_content_icon {
+        font-size: 25px;
+    }
+    .main_body nav .nav_content h4 {
+        display: none;
+    }
+    .main_body .post_grid {
+        gap: 1px;
+    }
 }
