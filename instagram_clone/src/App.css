@@ -378,7 +378,7 @@ header .navbar .nav-links > #user-image {
     .top-body {
         padding: 50px 0;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 8%;
     }
@@ -536,7 +536,7 @@ header .navbar .nav-links > #user-image {
         padding: 0;
         margin: 20px;
         margin-bottom: 0;
-        /* justify-content: center; */
+        justify-content: flex-start;
         /* border: 1px solid red; */
     }
 
