@@ -5,7 +5,7 @@ import TopBody from "./components/topBody/TopBody";
 import Circle from "./components/topBody/Circle";
 import MainBody from "./components/mainBody/MainBody";
 
-const instagramUserName = "nerdzfactory_co";
+const instagramUserName = "nerdzfactory_co"; // Change this Instagram username to get different profile content
 
 const url = `https://instagram-scraper-api2.p.rapidapi.com/v1/info?username_or_id_or_url=${instagramUserName}&url_embed_safe=true`;
 const highlightUrl = `https://instagram-scraper-api2.p.rapidapi.com/v1/highlights?username_or_id_or_url=${instagramUserName}&url_embed_safe=true`;

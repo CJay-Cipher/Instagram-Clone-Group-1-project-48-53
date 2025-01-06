@@ -13,7 +13,7 @@ body {
     --circle-width: 100px;
     --nav-color: #fff;
     --nav-bg-color: #000;
-    --nav-icon-hover-color: #3d3d3d;
+    --nav-icon-hover-color: #373845;
     --search-text-color: #fff;
     --search-icon-color: #777;
     --search-placholder-color: #777;
@@ -22,12 +22,13 @@ body {
     --main-body-bg: #161722;
     --main-body-color: #fff;
     --main-body-color2: #c1c1c1;
+    --main-body-color3: #e63939;
     --button-border-color: #c9c9c9;
 }
 .light-mode {
     --nav-color: #000;
     --nav-bg-color: #fff;
-    --nav-icon-hover-color: #bebebe;
+    --nav-icon-hover-color: #ececec;
     /* --search-text-color: #fff; */
     /* --search-icon-color: #777; */
     /* --search-placholder-color: #777; */
@@ -234,6 +235,10 @@ header .navbar .nav-links > #user-image {
     border-radius: 5px;
     border: 1px solid var(--button-border-color);
 }
+.info button:hover {
+    border-color: var(--main-body-color);
+}
+
 .info .message {
     padding: 5px 12px;
     font-size: 18px;
@@ -262,6 +267,9 @@ header .navbar .nav-links > #user-image {
 
 .info .dots {
     border: none;
+}
+.info .dots:hover {
+    background-color: var(--nav-icon-hover-color);
 }
 .info .dots .icon {
     font-size: 30px;
@@ -377,6 +385,10 @@ header .navbar .nav-links > #user-image {
     padding: 5px;
     border-radius: 50%;
     border: 1px solid var(--nav-icon-hover-color);
+    transition: 0.3s;
+}
+.circle .circle-image-box:hover::after {
+    border-color: var(--main-body-color3);
 }
 .circle .circle-image-box .circle-image {
     width: 100%;

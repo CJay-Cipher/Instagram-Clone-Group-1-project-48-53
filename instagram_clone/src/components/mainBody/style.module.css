@@ -14,10 +14,16 @@
     align-items: center;
     gap: 12px;
     cursor: pointer;
+    transition: 0.3s;
+    border-top: 2px solid transparent;
+}
+.main_body nav .nav_content:hover {
+    color: var(--main-body-color);
+    border-top-color: var(--main-body-color);
 }
 .main_body nav .active {
     color: var(--main-body-color);
-    border-top: 2px solid var(--main-body-color);
+    border-top-color: var(--main-body-color);
 }
 .main_body nav .nav_content .nav_content_icon {
     font-size: 20px;

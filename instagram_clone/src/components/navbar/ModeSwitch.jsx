@@ -24,10 +24,10 @@ const ModeSwitch = () => {
 
     return (
         <div className={styles.mode_switch_container}>
+            <p>{isDarkMode ? "Light" : "Dark"}</p>
             <button onClick={toggleMode} className={styles.mode_switch}>
-                {isDarkMode ? <IoMoonSharp /> : <IoSunny />}
+                {isDarkMode ? <IoSunny /> : <IoMoonSharp />}
             </button>
-            {/* <p>{isDarkMode ? "Light" : "Dark"}</p> */}
         </div>
     );
 };
