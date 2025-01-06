@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    cursor: pointer;
 }
 .main_body nav .active {
     color: var(--main-body-color);
@@ -28,21 +29,25 @@
 }
 .main_body .post_grid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
-    grid-template-columns: repeat(3, auto);
-    justify-items: auto;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    grid-auto-rows: 1fr; /* Ensures rows adjust dynamically */
+    gap: 5px; /* Space between grid items */
 }
+
 .main_body .post_grid li {
-    list-style: none;
+    /* Use aspect ratio to maintain the image's proportions */
+    aspect-ratio: 1; /* This makes the height equal to the width */
+    overflow: hidden; /* Hides any overflow content */
 }
+
 .main_body .post_grid li img {
-    height: 100%;
-    width: 100%;
+    width: 100%; /* Image fills the grid item */
+    height: 100%; /* Ensures image covers the full height */
+    object-fit: cover; /* Maintains aspect ratio while covering the area */
 }
 
 /* =================================================================== */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .main_body {
         margin: 50px 5%;
     }
@@ -52,13 +57,16 @@
     .main_body nav .nav_content h4 {
         font-size: 14px;
     }
-}
-/* =================================================================== */
-@media (max-width: 900px) {
     .main_body .post_grid {
-        gap: 5px;
+        gap: 3px;
     }
 }
+/* =================================================================== */
+/* @media (max-width: 900px) {
+    .main_body .post_grid {
+        gap: 3px;
+    }
+} */
 /* =================================================================== */
 @media (max-width: 800px) {
     .main_body {
@@ -82,7 +90,7 @@
     .main_body nav .nav_content h4 {
         display: none;
     }
-    .main_body .post_grid {
+    /* .main_body .post_grid {
         gap: 1px;
-    }
+    } */
 }

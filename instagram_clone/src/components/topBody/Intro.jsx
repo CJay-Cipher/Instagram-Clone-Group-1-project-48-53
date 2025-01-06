@@ -1,17 +1,16 @@
 import React from "react";
 import { FiUserPlus } from "react-icons/fi";
 
-function Intro() {
+function Intro({ title, service, description, link }) {
     return (
         <div className="intro">
-            <h4>Mediamodifier•Building Brands</h4>
-            <p>Product/service</p>
-            <p>We provide essential tools to help entrepreneurs grow their business online.</p>
-            <a href="mediamodifier.com">mediamodifier.com</a>
-
-            <p className="signed">
+            <h4>{title}</h4> {/* Use the title prop */}
+            <p>{service}</p> {/* Use the service prop */}
+            <p>{description}</p> {/* Use the description prop */}
+            <a href={link}>{link}</a> {/* Use the link prop */}
+            {/* <p className="signed">
                 Signed <span>by tini_send</span>
-            </p>
+            </p> */}
             <div className="connect-user">
                 <button>Follow</button>
                 <button>Message</button>

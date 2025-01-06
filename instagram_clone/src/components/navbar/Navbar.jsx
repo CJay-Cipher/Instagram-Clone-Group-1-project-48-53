@@ -11,10 +11,10 @@ import { CiSquarePlus } from "react-icons/ci";
 import { IoCompassOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 
-import userImage from "../../assets/nav_icons/user_image_lg.png";
+// import userImage from "../../assets/nav_icons/user_image_lg.png";
 import ModeSwitch from "./ModeSwitch";
 
-const Navbar = () => {
+const Navbar = ({ userResult }) => {
     return (
         <header>
             <nav className="navbar">
@@ -31,7 +31,7 @@ const Navbar = () => {
                         <NavIcon Icon={IoCompassOutline} />
                         <NavIcon Icon={IoMdHeartEmpty} />
 
-                        <img src={userImage} id="user-image" alt="User Nav Image" />
+                        <img src={userResult.data.profile_pic_url} id="user-image" alt="User Nav Image" />
                     </div>
                 </div>
             </nav>

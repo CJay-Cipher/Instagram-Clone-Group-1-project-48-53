@@ -6,7 +6,7 @@ import mainLogoLight from "../../assets/nav_icons/insta_light.png";
 import mainLogoDark from "../../assets/nav_icons/insta_dark.png";
 
 const ModeSwitch = () => {
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const toggleMode = () => {
         setIsDarkMode((prevMode) => !prevMode);

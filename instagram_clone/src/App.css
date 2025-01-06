@@ -10,9 +10,10 @@ body {
     color: #fff;
     background-color: var(--main-body-bg);
     font-family: "Segoe UI", sans-serif;
+    --circle-width: 100px;
     --nav-color: #fff;
     --nav-bg-color: #000;
-    --nav-icon-hover-color: #303030;
+    --nav-icon-hover-color: #3d3d3d;
     --search-text-color: #fff;
     --search-icon-color: #777;
     --search-placholder-color: #777;
@@ -26,7 +27,7 @@ body {
 .light-mode {
     --nav-color: #000;
     --nav-bg-color: #fff;
-    --nav-icon-hover-color: #cbcbcb;
+    --nav-icon-hover-color: #bebebe;
     /* --search-text-color: #fff; */
     /* --search-icon-color: #777; */
     /* --search-placholder-color: #777; */
@@ -140,8 +141,8 @@ header .navbar .nav-links > #user-image {
     height: 40px;
     margin: 0 10px;
     cursor: pointer;
-    /* border: 1px solid var(--main-body-color2);
-    border-radius: 50%; */
+    /* border: 1px solid var(--main-body-color2); */
+    border-radius: 50%;
 }
 
 /* ============== TOP BODY =================*/
@@ -155,6 +156,7 @@ header .navbar .nav-links > #user-image {
 
 .top-body .body-profile-pic {
     width: 200px;
+    border-radius: 50%;
 }
 
 .information {
@@ -262,6 +264,9 @@ header .navbar .nav-links > #user-image {
     color: var(--main-body-color2);
     letter-spacing: 0.7px;
 }
+.intro p:nth-child(3) {
+    width: 500px;
+}
 
 .intro a {
     font-size: 22px;
@@ -299,41 +304,51 @@ header .navbar .nav-links > #user-image {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    /* border: 1px solid blue; */
 }
 .circle .circle-image-box {
     height: 100px;
-    width: 100px;
+    width: var(--circle-width);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    background-color: #3767f7;
+    /* background-color: #3767f7; */
     border-radius: 50%;
     position: relative;
 }
-.circle .even {
+/* .circle .even {
     background-color: #f63769;
-}
+} */
 .circle .circle-image-box::after {
     content: "";
     position: absolute;
     height: 100%;
     width: 100%;
-    padding: 7px;
+    padding: 5px;
     border-radius: 50%;
-    border: 1px solid var(--main-body-color2);
+    border: 1px solid var(--nav-icon-hover-color);
 }
 .circle .circle-image-box .circle-image {
-    font-size: 65px;
+    width: 100%;
+    border-radius: 50%;
 }
 .circle p {
     color: var(--main-body-color);
-    font-size: 18px;
+    font-size: 14px;
+    text-align: center;
     margin-top: 17px;
+    width: var(--circle-width);
+    overflow: hidden; /* Hide overflow text */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
 }
 
 /* ================= RESPONSIVENESS ================= */
 @media (max-width: 1200px) {
+    body {
+        --circle-width: 70px;
+    }
     header {
         justify-content: flex-start;
     }
@@ -463,6 +478,9 @@ header .navbar .nav-links > #user-image {
     .intro p {
         font-size: 16px;
     }
+    .intro p:nth-child(3) {
+        width: 400px;
+    }
 
     .intro a {
         font-size: 16px;
@@ -483,8 +501,8 @@ header .navbar .nav-links > #user-image {
         gap: 10px;
     }
     .circle .circle-image-box {
-        height: 60px;
-        width: 60px;
+        height: 70px;
+        /* width: 70px; */
     }
     .circle .circle-image-box::after {
         padding: 4px;
@@ -493,8 +511,8 @@ header .navbar .nav-links > #user-image {
         font-size: 45px;
     }
     .circle p {
-        color: var(--main-body-color);
-        font-size: 14px;
+        /* color: var(--main-body-color); */
+        font-size: 12px;
         margin-top: 8px;
     }
 }
@@ -508,6 +526,9 @@ header .navbar .nav-links > #user-image {
 
 /* =================================================================== */
 @media (max-width: 800px) {
+    body {
+        --circle-width: 60px;
+    }
     header {
         height: 65px;
         justify-content: center;
@@ -629,6 +650,9 @@ header .navbar .nav-links > #user-image {
     .intro p:nth-child(2) {
         font-weight: 400;
     }
+    .intro p:nth-child(3) {
+        width: 300px;
+    }
 
     .intro a {
         font-size: 16px;
@@ -669,17 +693,17 @@ header .navbar .nav-links > #user-image {
     /* ============== CIRCLE ============== */
     .circle-container {
         margin: 8px 10px 0;
-        /* margin-top: 8px; */
-        justify-content: space-between;
-        gap: 10px;
+        /* margin-right: 20%; */
+        /* justify-content: flex-start; */
+        gap: 5%;
     }
 
     .circle-container .circle {
         gap: 10px;
     }
     .circle .circle-image-box {
-        height: 50px;
-        width: 50px;
+        height: 60px;
+        /* width: 60px; */
     }
     .circle .circle-image-box::after {
         padding: 2px;
@@ -688,7 +712,7 @@ header .navbar .nav-links > #user-image {
         font-size: 40px;
     }
     .circle p {
-        font-size: 12px;
+        font-size: 10px;
         margin: 0;
     }
 }

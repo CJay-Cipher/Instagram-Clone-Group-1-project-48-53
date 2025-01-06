@@ -1,32 +1,20 @@
 import styles from "./style.module.css";
 import Nav from "./Nav";
-import post_1 from "../../assets/post_images/post_1.png";
-import post_2 from "../../assets/post_images/post_2.png";
-import post_3 from "../../assets/post_images/post_3.png";
 
-const MainBody = () => {
+const MainBody = ({ userPost }) => {
+    if (!userPost.data || !Array.isArray(userPost.data.items)) {
+        return <p>No posts available.</p>;
+    }
+
     return (
         <section className={styles.main_body}>
             <Nav />
             <ul className={styles.post_grid}>
-                <li>
-                    <img src={post_1} alt="post 1" />
-                </li>
-                <li>
-                    <img src={post_2} alt="post 1" />
-                </li>
-                <li>
-                    <img src={post_3} alt="post 1" />
-                </li>
-                <li>
-                    <img src={post_2} alt="post 1" />
-                </li>
-                <li>
-                    <img src={post_3} alt="post 1" />
-                </li>
-                <li>
-                    <img src={post_1} alt="post 1" />
-                </li>
+                {userPost.data.items.map((item, index) => (
+                    <li key={index}>
+                        <img src={item.thumbnail_url} alt={`post ${index}`} />
+                    </li>
+                ))}
             </ul>
         </section>
     );

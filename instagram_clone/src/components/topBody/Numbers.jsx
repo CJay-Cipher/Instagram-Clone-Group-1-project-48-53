@@ -1,20 +1,20 @@
 import React from "react";
-import Mlogo from "../../assets/m_logo.png";
+// import Mlogo from "../../assets/m_logo.png";
 
-function Numbers() {
+function Numbers({ posts, followers, following, profilePic }) {
     return (
         <div className="numbers">
-            <img src={Mlogo} className="body-profile-pic" alt="user profile image" />
+            <img src={profilePic} className="body-profile-pic" alt="user profile image" />
             <div className="counts">
-                <h3>1,132</h3>
+                <h3>{posts}</h3> {/* Use the posts prop */}
                 <p>Posts</p>
             </div>
             <div className="counts">
-                <h3>60K</h3>
+                <h3>{followers}</h3> {/* Use the followers prop */}
                 <p>Followers</p>
             </div>
             <div className="counts">
-                <h3>4</h3>
+                <h3>{following}</h3> {/* Use the following prop */}
                 <p>Following</p>
             </div>
         </div>
