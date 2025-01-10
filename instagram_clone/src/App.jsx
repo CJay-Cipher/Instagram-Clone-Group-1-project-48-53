@@ -14,7 +14,7 @@ const postUrl = `https://instagram-scraper-api2.p.rapidapi.com/v1.2/posts?userna
 const options = {
     method: "GET",
     headers: {
-        "x-rapidapi-key": "b0616dba4cmsh109303e3d75ed18p1442dcjsnd54b926455fb",
+        "x-rapidapi-key": "81d0958a10msh17f592984739deap1b9eb5jsnc231158fcaa4",
         "x-rapidapi-host": "instagram-scraper-api2.p.rapidapi.com",
     },
 };
